@@ -3,8 +3,10 @@ import { Component } from "react";
 class Profile extends Component {
 
   render() {
-    /* TODO: render information about the developers */
-    return <p>Profile page coming soon</p>
+    return
+    (
+      <h3> Devlepoed by : Eman Riziq</h3>
+    )
   }
 };
 

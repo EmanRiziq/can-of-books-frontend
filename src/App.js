@@ -3,6 +3,7 @@ import Header from './Header';
 import Footer from './Footer';
 import BestBooks from './BestBooks';
 import Profile from './Profile';
+import About from "./About"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { withAuth0 } from '@auth0/auth0-react';
 
@@ -28,6 +29,10 @@ class App extends Component {
             <Route
               exact path="/Profile"
               element={isAuthenticated ? <Profile /> : <Welcome />}            >
+            </Route>
+            <Route
+              exact path="/About"
+              element={<About/> }           >
             </Route>
             {/* PLACEHOLDER: add a route with a path of '/about' that renders the `About` component */}
           </Routes>
