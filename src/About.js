@@ -1,13 +1,13 @@
 import { Component } from "react";
 
-class Profile extends Component {
+class About extends Component {
 
   render() {
     return
-    (
-      <h3> Devlepoed by : Eman Riziq</h3>
+    (<p>Devlepoed by : Eman Riziq</p>
+      // <h3> Devlepoed by : Eman Riziq</h3>
     )
   }
 };
 
-export default Profile;
+export default About;
