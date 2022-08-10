@@ -17,36 +17,37 @@ class BestBooks extends React.Component {
   componentDidMount() {
     console.log("inside the componentDidMount");
     this.getBooks();
+    
   }
 
   render() {
 
-    /* TODO: render all the books in a Carousel */
 
     return (
       <>
         <h2>My Essential Lifelong Learning &amp; Formation Shelf</h2>
 
         {this.state.books.length ? (
-          <><p>Book Carousel coming soon</p>
+          <>
             <Carousel fade>
-              {this.state.books.map((item, index) => {
+              {this.state.books.map((item, idx) => {
                 return (
-                  <>
-                    <Carousel.Item key={index}>
-                      <img
-                        className="d-block w-100"
-                        src="holder.js/800x400?text=First slide&bg=373940"
-                        alt={item.title}
-                      />
-                      <Carousel.Caption>
-                        <h3>{item.title}</h3>
-                        <p>{item.description}</p>
-                      </Carousel.Caption>
-                    </Carousel.Item></>
+                  <Carousel.Item key={idx}>
+                    <img 
+                     className="d-block w-100"
+                     src="https://th.bing.com/th/id/OIP.wi7Kjr5T34waNdcggcn_dQHaE7?w=280&h=187&c=7&r=0&o=5&dpr=1.25&pid=1.7"
+                      alt={item.title}
+                      width={"300"} height={"300"}
+                    />
+                    <Carousel.Caption >
+                      <h3>{item.title}</h3>
+                      <p>{item.description}</p>
+                    </Carousel.Caption>
+                  </Carousel.Item>
                 )
               })}
             </Carousel>
+
           </>
         ) : (
           <h3>No Books Found :(</h3>
